@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Złote Jabłko — Kolekcja Rituals Homme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="rituals.css">
+</head>
+<body>
+<!-- HEADER -->
+<header>
+  <div class="logo-wrap">
+    <svg width="28" height="32" viewBox="0 0 30 34" fill="none">
+      <path d="M15 2C15 2 10 0 8 4C10 4 13 4 15 2Z" fill="#1A4FAA"/>
+      <path d="M22.5 10C19.5 6 10.5 6 7.5 10C4.5 14 4.5 22 8 26.5C10 29 12 31 14 31C15.5 31 16.5 30 17.5 30C18.5 30 19.5 31 21 31C23 31 25 29 27 26.5C30.5 22 30.5 14 22.5 10Z" fill="#2563EB"/>
+    </svg>
+    <div class="logo-text"><span>Złote</span> Jabłko</div>
+  </div>
+  <nav class="header-nav">
+    <a href="#" class="nav-link">Pielęgnacja</a>
+    <a href="#" class="nav-link">Marki</a>
+    <a href="#" class="nav-link">Nowości</a>
+    <a href="#" class="nav-link">Promocje</a>
+  </nav>
+  <div class="header-right">
+    <button class="nav-fav-btn" id="nav-fav-btn" onclick="toggleFavPanel()">
+      ♡ Ulubione <span class="fav-count" id="fav-count">0</span>
+    </button>
+    <button class="nav-cart">Zamówić</button>
+  </div>
+</header>
+ 
+<!-- FAVOURITES PANEL -->
+<div class="fav-overlay" id="fav-overlay" onclick="toggleFavPanel()"></div>
+<div class="fav-panel" id="fav-panel">
+  <div class="fav-panel-head">
+    <span class="fav-panel-title">♥ Ulubione</span>
+    <button class="fav-panel-close" onclick="toggleFavPanel()">✕</button>
+  </div>
+  <div class="fav-panel-body" id="fav-panel-body">
+    <div class="fav-empty" id="fav-empty">
+      <div class="fav-empty-icon">♡</div>
+      <p>Brak ulubionych produktów</p>
+    </div>
+  </div>
+</div>
+ 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-circle-1"></div>
+  <div class="hero-circle-2"></div>
+  <svg class="hero-big-decor" viewBox="0 0 200 240" fill="none">
+    <path d="M100 14C100 14 68 2 52 26C68 26 86 22 100 14Z" fill="#1A4FAA"/>
+    <path d="M148 64C124 34 76 34 52 64C28 94 28 154 52 184C68 204 84 218 100 218C110 218 118 212 126 212C134 212 142 218 158 218C174 218 190 204 206 184C230 154 230 94 148 64Z" fill="#1A4FAA"/>
+  </svg>
+ 
+  <div class="hero-content">
+    <p class="hero-tag">Rytuały pielęgnacji</p>
+    <h1 class="hero-title">
+      Pielęgnacja,<br>która <em>kocha</em><br>Twoją skórę
+    </h1>
+    <p class="hero-desc">Trzy produkty do porannego rytuału pielęgnacyjnego — wyselekcjonowane z miłością przez redakcję Złotego Jabłka.</p>
+    <div class="hero-cta-row">
+      <a href="#products" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Zobacz kolekcję
+      </a>
+      <div class="hero-scroll">Przewiń</div>
+    </div>
+  </div>
+</section>
+ 
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Oryginalne produkty
+  </div>
+  <div class="trust-item">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    Dostawa od 1 dnia
+  </div>
+  <div class="trust-item">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    Testowane dermatologicznie
+  </div>
+  <div class="trust-item">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    Formuły wegańskie
+  </div>
+</div>
+ 
+<!-- PRODUCTS -->
+<section class="products" id="products">
+ 
+  <div class="section-head">
+    <div class="section-head-left">
+      <h2 class="section-title">Kolekcja</h2>
+      <span class="section-count">3 produkty</span>
+    </div>
+    <div class="section-filter">
+      <button class="filter-btn active">Wszystkie</button>
+      <button class="filter-btn">Twarz</button>
+      <button class="filter-btn">Broda</button>
+    </div>
+  </div>
+ 
+  <!-- ─── PRODUKT 1 ─── -->
+  <div class="product-card">
+    <div class="card-visual gallery-visual">
+      <div class="card-visual-decor"></div>
+ 
+      <!-- Main image -->
+      <div class="gallery-main">
+        <img id="gallery1-main" src="Lodowy Oddech/Lododwy oddech.jpg" alt="Rituals Homme After Shave Refreshing Gel">
+      </div>
+ 
+      <!-- Thumbnails -->
+      <div class="gallery-thumbs" id="gallery1-thumbs">
+        <button class="thumb active" onclick="switchImg('gallery1-main','gallery1-thumbs',this,'ZDJECIE_1_MINIATURA_1.jpg')">
+          <img src="Lodowy Oddech/Lododwy oddech.jpg" alt="Polecane 1">
+        </button>
+        <button class="thumb" onclick="switchImg('gallery1-main','gallery1-thumbs',this,'ZDJECIE_1_MINIATURA_2.jpg')">
+          <img src="ZDJECIE_1_MINIATURA_2.jpg" alt="">
+        </button>
+        <button class="thumb" onclick="switchImg('gallery1-main','gallery1-thumbs',this,'ZDJECIE_1_MINIATURA_3.jpg')">
+          <img src="ZDJECIE_1_MINIATURA_3.jpg" alt="">
+        </button>
+        <button class="thumb" onclick="switchImg('gallery1-main','gallery1-thumbs',this,'ZDJECIE_1_MINIATURA_4.jpg')">
+          <img src="ZDJECIE_1_MINIATURA_4.jpg" alt="">
+        </button>
+      </div>
+ 
+      <div class="card-badges">
+        <span class="badge accent">Wegański</span>
+        <span class="badge special">96% naturalnych</span>
+        <span class="badge">Derm. testowany</span>
+        <span class="badge">100 ml</span>
+      </div>
+      <div class="product-num">01</div>
+    </div>
+ 
+    <div class="card-content">
+      <div class="card-header">
+        <div class="card-label">Balsam №003 — Po goleniu</div>
+        <h3 class="card-title">Lodowy<br><em>oddech</em></h3>
+        <div class="card-subtitle">Homme Refreshing After-Shave Gel</div>
+        <div class="card-rating">
+          <div class="rating-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <div class="rating-score-wrap">
+            <span class="rating-score">4,7</span>
+            <span class="rating-max">/ 5</span>
+          </div>
+          <span class="rating-count">· 2 148 opinii</span>
+        </div>
+      </div>
+ 
+      <div class="price-row">
+        <span class="price-current">54,99 zł</span>
+        <span class="price-old">67,99 zł</span>
+        <span class="price-badge">−19%</span>
+        <button class="btn-fav" data-name="Lodowy Oddech" data-price="54,99 zł" data-img="img1">♡</button>
+      </div>
+ 
+      <div>
+        <div class="section-label">Opis</div>
+        <p class="card-desc">Odświeżający żel po goleniu, który zapewnia idealnie gładką skórę. Kompleks chłodzący z żeń-szeniem koi, energetyzuje i nawilża — dzięki 96% składnikom naturalnym.</p>
+      </div>
+ 
+      <div>
+        <div class="section-label">Właściwości</div>
+        <div class="features">
+          <div class="feature">Zmniejsza zaczerwienienia i koi podrażnienia</div>
+          <div class="feature">Nieklejąca, szybko wysychająca formuła</div>
+          <div class="feature">Kompleks chłodzący + naturalny wyciąg z żeń-szenia</div>
+          <div class="feature">Odpowiedni dla każdego rodzaju skóry, w tym wrażliwej</div>
+          <div class="feature">Pomaga zwalczać wczesne oznaki starzenia</div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Specyfikacja</div>
+        <div class="specs">
+          <div class="spec"><div class="spec-label">Konsystencja</div><div class="spec-value">Żel</div></div>
+          <div class="spec"><div class="spec-label">Zapach</div><div class="spec-value">Ziemski, drzewny</div></div>
+          <div class="spec"><div class="spec-label">Rodzaj skóry</div><div class="spec-value">Wszystkie</div></div>
+          <div class="spec"><div class="spec-label">Stopień krycia</div><div class="spec-value">Łagodny</div></div>
+          <div class="spec"><div class="spec-label">Przeznaczenie</div><div class="spec-value">Twarz</div></div>
+          <div class="spec"><div class="spec-label">Pojemność</div><div class="spec-value">100 ml</div></div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Rytuał stosowania</div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">Oczyszczanie — Pianka do twarzy</div>
+              <div class="step-text">Jedno naciśnięcie zmienia płyn w delikatną pianę. Stosować rano i wieczorem, omijając okolice oczu.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">Pielęgnacja brody — Pianka do golenia</div>
+              <div class="step-text">Opłucz twarz ciepłą wodą. Wmasuj pianę w mokrą twarz i zacznij golenie. Po goleniu dokładnie spłucz.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">Pielęgnacja — Żel po goleniu</div>
+              <div class="step-text">Nałóż żel na dokładnie ogoloną, suchą skórę.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <div class="step-title">Nawilżenie — Krem do twarzy</div>
+              <div class="step-text">Nałóż obficie na twarz i szyję, omijając okolice oczu. Stosuj rano i wieczorem.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Składniki</div>
+        <div class="ingredients-block">
+          <div class="ingredients-title">INCI</div>
+          <p class="ingredients-text">Aqua/Water, Alcohol Denat, Polyglyceryl-4 Caprate, Polyglyceryl-6 Caprylate, Glycerin, Aloe Barbadensis Leaf Juice, Panthenol, Ocimum Basilicum (Basil) Leaf Extract, Panax Ginseng Root Extract, Allantoin, Bisabolol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Aminomethyl Propanol, Menthyl Lactate, Citric Acid, Parfum/Fragrance, Linalool, Coumarin, Limonene, Citronellol, Geraniol, Potassium Sorbate, Sodium Benzoate</p>
+        </div>
+      </div>
+ 
+      <div class="contact-block">
+        <div class="contact-title">Producent</div>
+        <div class="contact-text">Rituals Cosmetics<br>Herengracht 566, 1042 BW Amsterdam, NL</div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ─── PRODUKT 2 ─── -->
+  <div class="product-card">
+    <div class="card-visual">
+      <div class="card-visual-decor"></div>
+      <div class="product-img-wrap">
+        <img src="ZDJECIE_2.jpg" alt="Rituals Homme Hair & Beard Oil">
+        <div class="img-placeholder" style="display:none">Zdjęcie</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge accent">Wegański</span>
+        <span class="badge special">99% naturalnych</span>
+        <span class="badge">Derm. testowany</span>
+        <span class="badge">30 ml</span>
+      </div>
+      <div class="product-num">02</div>
+    </div>
+ 
+    <div class="card-content">
+      <div class="card-header">
+        <div class="card-label">Olejek №001 — Do brody i włosów</div>
+        <h3 class="card-title">Rytuał<br>samca<br><em>alfa</em></h3>
+        <div class="card-subtitle">Homme Hair &amp; Beard Oil</div>
+        <div class="card-rating">
+          <div class="rating-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star half">★</span>
+          </div>
+          <div class="rating-score-wrap">
+            <span class="rating-score">4,6</span>
+            <span class="rating-max">/ 5</span>
+          </div>
+          <span class="rating-count">· 1 873 opinie</span>
+        </div>
+      </div>
+ 
+      <div class="price-row">
+        <span class="price-current">79,99 zł</span>
+        <span class="price-old">92,99 zł</span>
+        <span class="price-badge">−14%</span>
+        <button class="btn-fav" data-name="Rytuał Alfa" data-price="79,99 zł" data-img="img2">♡</button>
+      </div>
+ 
+      <div>
+        <div class="section-label">Opis</div>
+        <p class="card-desc">Olejek do brody i włosów z olejkiem bazyliowym i arganowym. Nawilża skórę, zmiękcza włoski i dodaje im energii — niesforne włoski stają się wygładzone i odżywione, zapewniając efekt miękkiej, idealnie wypielęgnowanej brody.</p>
+      </div>
+ 
+      <div>
+        <div class="section-label">Właściwości</div>
+        <div class="features">
+          <div class="feature">Odżywia brodę i poprawia jej stan</div>
+          <div class="feature">Odpowiedni do brody długiej i średniej długości</div>
+          <div class="feature">Olejki arganowy i bazyliowy — 99% składników naturalnych</div>
+          <div class="feature">Nawilża skórę brody, zmiękcza i wygładza włoski</div>
+          <div class="feature">Odpowiedni dla każdego rodzaju skóry, w tym wrażliwej</div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Specyfikacja</div>
+        <div class="specs">
+          <div class="spec"><div class="spec-label">Konsystencja</div><div class="spec-value">Olejek</div></div>
+          <div class="spec"><div class="spec-label">Zapach</div><div class="spec-value">Ziemski, drzewny</div></div>
+          <div class="spec"><div class="spec-label">Rodzaj skóry</div><div class="spec-value">Wszystkie</div></div>
+          <div class="spec"><div class="spec-label">Typ produktu</div><div class="spec-value">Flakon z pompką</div></div>
+          <div class="spec"><div class="spec-label">Przeznaczenie</div><div class="spec-value">Twarz, Włosy</div></div>
+          <div class="spec"><div class="spec-label">Pojemność</div><div class="spec-value">30 ml</div></div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Rytuał stosowania</div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">Oczyszczanie — Pianka do twarzy</div>
+              <div class="step-text">Jedno naciśnięcie zmienia płyn w delikatną pianę. Stosować rano i wieczorem, omijając okolice oczu.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">Złuszczanie — Peeling do twarzy</div>
+              <div class="step-text">Stosować przed goleniem lub przed kremem. Wmasuj w skórę, omijając oczy. Zmyj letnią wodą. Stosuj raz w tygodniu.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">Nawilżenie — Krem do twarzy</div>
+              <div class="step-text">Nałóż obficie na twarz i szyję, omijając okolice oczu. Stosuj rano i wieczorem.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <div class="step-title">Pielęgnacja — Olejek do brody</div>
+              <div class="step-text">Rozetrzyj 2–3 krople w dłoniach i wmasuj w brodę ruchami ku górze. Przeczesz palcami lub szczotką i stylizuj jak zwykle. Stosuj rano i wieczorem.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Składniki</div>
+        <div class="ingredients-block">
+          <div class="ingredients-title">INCI</div>
+          <p class="ingredients-text">Prunus Armeniaca (Apricot) Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Sesamum Indicum (Sesame) Seed Oil, Parfum/Fragrance, Argania Spinosa Kernel Oil, Helianthus Annuus (Sunflower) Seed Oil, Helianthus Annuus (Sunflower) Hybrid Oil, Ocimum Basilicum (Basil) Leaf Extract, Tocopherol, Limonene, Linalool, Citronellol, Citral, Geraniol</p>
+        </div>
+      </div>
+ 
+      <div class="contact-block">
+        <div class="contact-title">Producent</div>
+        <div class="contact-text">Rituals Cosmetics<br>Herengracht 567, 1043 BW Amsterdam, NL</div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ─── PRODUKT 3 ─── -->
+  <div class="product-card">
+    <div class="card-visual">
+      <div class="card-visual-decor"></div>
+      <div class="product-img-wrap">
+        <img src="ZDJECIE_3.jpg" alt="Rituals Homme Face Moisturiser">
+        <div class="img-placeholder" style="display:none">Zdjęcie</div>
+      </div>
+      <div class="card-badges">
+        <span class="badge accent">Wegański</span>
+        <span class="badge special">95% naturalnych</span>
+        <span class="badge">Derm. testowany</span>
+        <span class="badge">50 ml</span>
+      </div>
+      <div class="product-num">03</div>
+    </div>
+ 
+    <div class="card-content">
+      <div class="card-header">
+        <div class="card-label">Krem №002 — Nawilżający</div>
+        <h3 class="card-title">Żywa<br><em>wilgoć</em></h3>
+        <div class="card-subtitle">Homme Anti-Ageing Face Moisturiser</div>
+        <div class="card-rating">
+          <div class="rating-stars">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <div class="rating-score-wrap">
+            <span class="rating-score">4,8</span>
+            <span class="rating-max">/ 5</span>
+          </div>
+          <span class="rating-count">· 3 410 opinii</span>
+        </div>
+      </div>
+ 
+      <div class="price-row">
+        <span class="price-current">89,99 zł</span>
+        <span class="price-old">105,99 zł</span>
+        <span class="price-badge">−15%</span>
+        <button class="btn-fav" data-name="Żywa Wilgoć" data-price="89,99 zł" data-img="img3">♡</button>
+      </div>
+ 
+      <div>
+        <div class="section-label">Opis</div>
+        <p class="card-desc">Lekki krem przeciwstarzeniowy z ekstraktem z żeń-szenia i kwasem hialuronowym. Intensywnie nawilża, wzmacnia barierę skórną i nadaje skórze świeży, wypoczęty wygląd przez cały dzień.</p>
+      </div>
+ 
+      <div>
+        <div class="section-label">Właściwości</div>
+        <div class="features">
+          <div class="feature">Intensywne nawilżenie przez 24 godziny</div>
+          <div class="feature">Wygładza pierwsze zmarszczki i linie</div>
+          <div class="feature">Kwas hialuronowy + ekstrakt z żeń-szenia</div>
+          <div class="feature">Wzmacnia barierę skórną i chroni przed stresem</div>
+          <div class="feature">Odpowiedni dla wszystkich typów skóry, nie pozostawia tłustego połysku</div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Specyfikacja</div>
+        <div class="specs">
+          <div class="spec"><div class="spec-label">Konsystencja</div><div class="spec-value">Krem</div></div>
+          <div class="spec"><div class="spec-label">Zapach</div><div class="spec-value">Świeży, lekki</div></div>
+          <div class="spec"><div class="spec-label">Rodzaj skóry</div><div class="spec-value">Wszystkie</div></div>
+          <div class="spec"><div class="spec-label">Przeznaczenie</div><div class="spec-value">Twarz</div></div>
+          <div class="spec"><div class="spec-label">Pojemność</div><div class="spec-value">50 ml</div></div>
+          <div class="spec"><div class="spec-label">Marka</div><div class="spec-value">Rituals</div></div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Rytuał stosowania</div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">Oczyszczanie</div>
+              <div class="step-text">Oczyść twarz pianką do mycia. Osusz skórę czystym ręcznikiem.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">Tonizowanie (opcjonalnie)</div>
+              <div class="step-text">Nałóż tonik delikatnymi, oklepującymi ruchami, aby przygotować skórę do nawilżenia.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">Nawilżenie — Krem do twarzy</div>
+              <div class="step-text">Nałóż niewielką ilość kremu na twarz i szyję lekkimi, masującymi ruchami. Stosuj rano i wieczorem.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div>
+        <div class="section-label">Składniki</div>
+        <div class="ingredients-block">
+          <div class="ingredients-title">INCI</div>
+          <p class="ingredients-text">Aqua/Water, Glycerin, Butylene Glycol, Niacinamide, Sodium Hyaluronate, Panax Ginseng Root Extract, Tocopheryl Acetate, Dimethicone, Cyclopentasiloxane, Cetearyl Alcohol, Phenoxyethanol, Carbomer, Sodium Hydroxide, Parfum/Fragrance, Limonene, Linalool, Citronellol, Geraniol, Potassium Sorbate, Sodium Benzoate</p>
+        </div>
+      </div>
+ 
+      <div class="contact-block">
+        <div class="contact-title">Producent</div>
+        <div class="contact-text">Rituals Cosmetics<br>Herengracht 566, 1042 BW Amsterdam, NL</div>
+      </div>
+    </div>
+  </div>
+ 
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-wrap">
+        <svg width="24" height="28" viewBox="0 0 30 34" fill="none">
+          <path d="M15 2C15 2 10 0 8 4C10 4 13 4 15 2Z" fill="#60A5FA"/>
+          <path d="M22.5 10C19.5 6 10.5 6 7.5 10C4.5 14 4.5 22 8 26.5C10 29 12 31 14 31C15.5 31 16.5 30 17.5 30C18.5 30 19.5 31 21 31C23 31 25 29 27 26.5C30.5 22 30.5 14 22.5 10Z" fill="#60A5FA"/>
+        </svg>
+        <div class="footer-logo-text"><span>Złote</span> Jabłko</div>
+      </div>
+      <div class="footer-tagline">Piękno dla każdego</div>
+    </div>
+    <div class="footer-links">
+      <a href="#" class="footer-link">O nas</a>
+      <a href="#" class="footer-link">Kontakt</a>
+      <a href="#" class="footer-link">Dostawa</a>
+      <a href="#" class="footer-link">Zwroty</a>
+      <a href="#" class="footer-link">Program lojalnościowy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Złote Jabłko. Wszelkie prawa zastrzeżone.</div>
+    <div class="footer-social">
+      <a href="#" class="social-btn">✦</a>
+      <a href="#" class="social-btn">◈</a>
+      <a href="#" class="social-btn">⊕</a>
+    </div>
+  </div>
+</footer>
+  <script src="rituals.js"></script>
+</body>
+</html>
