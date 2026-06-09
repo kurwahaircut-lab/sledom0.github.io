@@ -1,4 +1,3 @@
-
   // ─── GALLERY ───
   function switchImg(mainId, thumbsId, clickedThumb, src) {
     const mainImg = document.getElementById(mainId);
